@@ -24,7 +24,7 @@
     </nav>
     <div class="cta flex">
       <div class="container">
-        <div class="title bold">Our Team<span>.</span></div>
+        <h2 class="title bold">Our Team<span>.</span></h2>
         <p class="text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad excepturi
           soluta nesciunt vitae nobis, inventore beatae laboriosam deserunt.
@@ -88,26 +88,17 @@ nav {
   background-image: url("../assets/img/rev-slider-main-home-img-03.jpg");
   background-size: cover;
   background-position: center;
+  padding-top: 8rem;
   height: 1000px;
   .title {
     font-size: 6rem;
-    color: $txt-color-12;
-    span {
-      color: $txt-color-08;
-    }
   }
   .text {
     width: 45%;
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: $txt-color-09;
-    line-height: 2rem;
   }
-
   .white {
     background-color: $bg-color-01;
   }
-
   .orange {
     background-color: $bg-color-08;
     color: $txt-color-01;

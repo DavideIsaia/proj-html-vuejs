@@ -68,4 +68,16 @@ export default {
 <style lang="scss">
 @import "./style/commons.scss";
 @import "./style/variables.scss";
+.title {
+  color: $txt-color-12;
+  span {
+    color: $txt-color-08;
+  }
+}
+.text {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: $txt-color-09;
+  line-height: 2rem;
+}
 </style>
