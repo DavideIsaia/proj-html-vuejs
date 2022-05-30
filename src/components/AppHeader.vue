@@ -5,7 +5,15 @@
         <img src="../assets/img/logo-img-01.png" alt="Everlead logo" />
       </div>
       <ul>
-        <li></li>
+        <li
+          class="text bold"
+          @click="isActive(index)"
+          v-for="(element, index) in headerLinks"
+          :key="index"
+          :class="{ active: element.active }"
+        >
+          <a href="">{{ element.text }}</a>
+        </li>
         <li>
           <a href=""><i class="fas fa-search"></i></a>
         </li>
@@ -21,6 +29,10 @@
 <script>
 export default {
   name: "AppHeader",
+  // prelevo l'array dal genitore
+  props: {
+    headerLinks: Array,
+  },
 };
 </script>
 

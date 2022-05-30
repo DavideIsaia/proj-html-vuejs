@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <AppHeader @isActive="isActive" :headerLinks="headerLinks" />
     <AppMain />
     <AppFooter />
   </div>
@@ -28,7 +28,7 @@ export default {
         },
         {
           url: "#",
-          text: "PAges",
+          text: "Pages",
           active: false,
         },
         {
