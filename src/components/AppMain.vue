@@ -7,7 +7,11 @@
           Lorem, ipsum dolor sit amet consectetur adipisicing elit
         </p>
         <div class="spec flex">
-          <SpecCard />
+          <SpecCard
+            v-for="(element, index) in cards"
+            :key="index"
+            :element="element"
+          />
         </div>
       </div>
     </section>
@@ -23,7 +27,7 @@ export default {
   },
   data() {
     return {
-      card: [
+      cards: [
         {
           thumb: "svg-0.svg",
           title: "Knowing",
