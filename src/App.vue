@@ -24,7 +24,7 @@ export default {
         {
           url: "#",
           text: "Homes",
-          active: false,
+          active: true,
         },
         {
           url: "#",

@@ -1,6 +1,6 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Noto+Serif:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ img {
 }
 
 .container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -29,9 +29,10 @@ img {
 
 .text {
   font-family: 'Lato', sans-serif;
-  .bold {
-    font-weight: 400;
-  }
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .sign {
@@ -45,4 +46,13 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  margin: 2rem 0.5rem;
+  border-color: transparent;
+  cursor: pointer;
 }
