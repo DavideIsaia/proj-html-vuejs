@@ -57,37 +57,7 @@
       </div>
     </section>
     <!-- section latest news -->
-    <section class="news">
-      <div class="container">
-        <h3 class="title bold">Latest News<span>.</span></h3>
-        <p class="text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit
-        </p>
-        <div class="line"></div>
-        <div class="flex">
-          <div class="card">
-            <div class="card__top">
-              <img src="../assets/img/h1-blog-img-02.jpg" alt="" />
-              <div class="tag">
-                <i class="fas fa-tag"></i><span>Business, Leading</span>
-              </div>
-            </div>
-            <div>
-              <i class="far fa-clock"></i>
-              <span class="text space">May 5, 2019</span>
-              <i class="far fa-user"></i>
-              <span class="text">Amanda Doe</span>
-            </div>
-            <h5 class="title bold">Next Investment</h5>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              tenetur...
-            </p>
-            <div class="read-more">read more</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <NewsCard />
   </main>
 </template>
 
@@ -96,6 +66,7 @@ import SpecCard from "./SpecCard.vue";
 import CitCard from "./CitCard.vue";
 import CalendarCard from "./CalendarCard.vue";
 import ProgressCard from "./ProgressCard.vue";
+import NewsCard from "./NewsCard.vue";
 export default {
   name: "AppMain",
   components: {
@@ -103,6 +74,7 @@ export default {
     CitCard,
     CalendarCard,
     ProgressCard,
+    NewsCard,
   },
   data() {
     return {
@@ -226,64 +198,6 @@ main {
     .col-right {
       float: right;
       width: 45%;
-    }
-  }
-  .news {
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 6rem;
-    .line {
-      margin: 2rem auto 0;
-    }
-    .title {
-      font-size: 3rem;
-    }
-    .card {
-      width: 30%;
-      margin: 5rem 3rem;
-      line-height: 2rem;
-      text-align: left;
-      &__top {
-        position: relative;
-        img {
-          width: 100%;
-          margin-bottom: 1rem;
-        }
-        .tag {
-          position: absolute;
-          bottom: 15px;
-          right: 15px;
-          background-color: $bg-color-08;
-          width: 45%;
-          color: $txt-color-01;
-          text-align: center;
-          padding: 0.4rem;
-          i {
-            color: $txt-color-01;
-          }
-        }
-      }
-      .title {
-        font-size: 1.6rem;
-      }
-      .text {
-        font-size: 0.9rem;
-      }
-      .space {
-        margin-right: 1.2rem;
-      }
-      i {
-        color: $txt-color-08;
-        margin-right: 0.6rem;
-        font-size: 0.9rem;
-      }
-      p {
-        &.text {
-          font-size: 1.2rem;
-          line-height: 2rem;
-          padding: 0.5rem 0 1rem;
-        }
-      }
     }
   }
 }
