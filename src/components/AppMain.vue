@@ -60,6 +60,11 @@
     <NewsCard />
     <!-- section testimonials -->
     <TestimonialsCard />
+    <!-- section player -->
+    <section class="player">
+      <img src="../assets/img/h1-img-04.jpg" alt="" />
+      <i class="fas fa-play"></i>
+    </section>
   </main>
 </template>
 
@@ -202,6 +207,23 @@ main {
     .col-right {
       float: right;
       width: 45%;
+    }
+  }
+  .player {
+    position: relative;
+    margin-top: 22.2rem;
+    i {
+      position: absolute;
+      color: $fill-color-01;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      padding: 15rem;
+      &:hover {
+        cursor: pointer;
+        color: $txt-color-08;
+      }
     }
   }
 }
