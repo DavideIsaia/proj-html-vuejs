@@ -32,6 +32,33 @@
         </div>
       </div>
     </section>
+    <!-- section creative leader -->
+    <section class="creative">
+      <div class="container clearfix">
+        <div class="col-left">
+          <h4 class="title bold">Creative Leader<span>.</span></h4>
+          <div class="line"></div>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            minima illo veritatis ea, odio eius. Fugiat inventore placeat amet
+            assumenda autem fuga est modi, voluptatum dolorem exercitationem,
+            quam sit voluptatem? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Illo laborum, recusandae nisi provident fugiat
+            numquam culpa dolor minima velit nesciunt doloremque ullam
+          </p>
+          <div class="read-more">read more</div>
+        </div>
+        <div class="col-right">
+          <div class="bar-container clearfix">
+            <h5 class="title bold left">Mentorship</h5>
+            <h5 class="title bold right">78%</h5>
+            <div class="progress-bar">
+              <div class="filled"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -93,6 +120,24 @@ export default {
           place: "Cambridge, MA 02138, USA",
         },
       ],
+      bars: [
+        {
+          title: "Mentorship",
+          percentage: 78,
+        },
+        {
+          title: "Education",
+          percentage: 95,
+        },
+        {
+          title: "Learning",
+          percentage: 65,
+        },
+        {
+          title: "Motivation",
+          percentage: 83,
+        },
+      ],
     };
   },
 };
@@ -131,6 +176,52 @@ main {
         padding: 1.5rem 3rem;
         font-size: 1.8rem;
         border-bottom: 2px solid $bdr-color-03;
+      }
+    }
+  }
+  .creative {
+    padding: 5rem 0;
+    background-color: $bg-color-01;
+    .col-left {
+      float: left;
+      width: 45%;
+      .title {
+        font-size: 3rem;
+      }
+      .text {
+        font-size: 1.1rem;
+        padding-bottom: 2rem;
+      }
+    }
+    .col-right {
+      float: right;
+      width: 45%;
+      .bar-container {
+        h5 {
+          font-size: 1.5rem;
+        }
+        .left {
+          float: left;
+        }
+        .right {
+          float: right;
+        }
+        .progress-bar {
+          position: relative;
+          top: 1rem;
+          float: left;
+          height: 2px;
+          width: 100%;
+          background-color: $bg-color-07;
+        }
+        .filled {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 78%;
+          height: 3px;
+          background-color: $bg-color-08;
+        }
       }
     }
   }
