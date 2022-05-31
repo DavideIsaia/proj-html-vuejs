@@ -64,5 +64,13 @@ export default {
       font-size: 1rem;
     }
   }
+  &:hover {
+    cursor: pointer;
+    background-color: $bg-color-01;
+    box-shadow: inset 0px 32px 50px -75px #000000;
+    h6 {
+      color: $txt-color-08;
+    }
+  }
 }
 </style>
