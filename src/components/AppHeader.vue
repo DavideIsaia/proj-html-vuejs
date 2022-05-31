@@ -7,11 +7,22 @@
       <ul>
         <li
           class="text"
-          @click="$emit('isActive')"
+          @click="$emit('isActive', index)"
           v-for="(element, index) in headerLinks"
           :key="index"
           :class="{ active: element.active }"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            style="height: 20px"
+            fill="#fff"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
           <a class="bold" href="">{{ element.text }}</a>
         </li>
         <li>
@@ -76,9 +87,8 @@ nav {
       }
     }
     &.active {
-      &::before {
-        content: url("../assets/svg/svg-6.svg");
-        filter: invert(55%) sepia(100%) saturate(3.5);
+      svg {
+        fill: $txt-color-08;
       }
     }
   }

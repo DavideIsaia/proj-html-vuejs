@@ -123,7 +123,7 @@ main {
     background-size: cover;
     background-position: center;
     margin-top: 5rem;
-    padding: 6rem 0;
+    padding: 12rem 0;
     .calendar {
       width: 40%;
       background-color: $bg-color-04;

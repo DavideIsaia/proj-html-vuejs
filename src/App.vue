@@ -56,8 +56,8 @@ export default {
   },
   methods: {
     isActive: function (index) {
-      this.headerLinks.forEach((element, index) => {
-        this.headerLinks[index].active = false;
+      this.headerLinks.forEach((element) => {
+        element.active = false;
       });
       this.headerLinks[index].active = !this.headerLinks[index].active;
     },
