@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  padding-top: 5rem;
+  margin: 5rem 0;
   line-height: 2rem;
   img {
     width: 50%;

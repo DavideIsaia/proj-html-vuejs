@@ -6,13 +6,13 @@
       </div>
       <ul>
         <li
-          class="text bold"
+          class="text"
           @click="$emit('isActive')"
           v-for="(element, index) in headerLinks"
           :key="index"
           :class="{ active: element.active }"
         >
-          <a href="">{{ element.text }}</a>
+          <a class="bold" href="">{{ element.text }}</a>
         </li>
         <li>
           <a href=""><i class="fas fa-search"></i></a>
