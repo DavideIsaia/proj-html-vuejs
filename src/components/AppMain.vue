@@ -24,24 +24,11 @@
       <div class="container">
         <div class="calendar">
           <div class="title bold">Upcoming Events</div>
-          <div class="meeting clearfix">
-            <div class="date">
-              <div class="day">07</div>
-              <div class="month">Jan. 2022</div>
-            </div>
-            <div class="col-right">
-              <h6>Melbourne Coaching</h6>
-              <div>
-                <i class="far fa-clock"></i
-                ><span class="text">9:00 am - 5:00 pm, Jan 7, 2022</span>
-              </div>
-              <div>
-                <i class="fas fa-map-marker-alt"></i
-                ><span class="text">Cambridge, MA 02138, USA</span>
-              </div>
-              <div class="read-more">read more</div>
-            </div>
-          </div>
+          <CalendarCard
+            v-for="(element, index) in meetings"
+            :key="index"
+            :element="element"
+          />
         </div>
       </div>
     </section>
@@ -51,11 +38,13 @@
 <script>
 import SpecCard from "./SpecCard.vue";
 import CitCard from "./CitCard.vue";
+import CalendarCard from "./CalendarCard.vue";
 export default {
   name: "AppMain",
   components: {
     SpecCard,
     CitCard,
+    CalendarCard,
   },
   data() {
     return {
@@ -142,42 +131,6 @@ main {
         padding: 1.5rem 3rem;
         font-size: 1.8rem;
         border-bottom: 2px solid $bdr-color-03;
-      }
-      .meeting {
-        background-color: $bg-color-04;
-        padding: 3rem 0;
-        border-bottom: 2px solid $bdr-color-03;
-        .date {
-          float: left;
-          padding: 1rem;
-          background-color: $bg-color-08;
-          color: white;
-          text-align: center;
-          margin-left: 3rem;
-          .day {
-            font-size: 1.6rem;
-          }
-          .month {
-            font-family: "Lato", sans-serif;
-            font-size: 0.8rem;
-          }
-        }
-        .col-right {
-          float: left;
-          padding-left: 1rem;
-          text-align: left;
-          line-height: 2rem;
-          h6 {
-            font-size: 1.4rem;
-          }
-          i {
-            margin-right: 1rem;
-            color: $txt-color-08;
-          }
-          span {
-            font-size: 1rem;
-          }
-        }
       }
     }
   }
