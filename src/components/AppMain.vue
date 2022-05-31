@@ -66,18 +66,22 @@
         <div class="line"></div>
         <div class="flex">
           <div class="card">
-            <img src="" alt="" />
+            <div class="card__top">
+              <img src="../assets/img/h1-blog-img-02.jpg" alt="" />
+              <div class="tag">
+                <i class="fas fa-tag"></i><span>Business, Leading</span>
+              </div>
+            </div>
             <div>
               <i class="far fa-clock"></i>
-              <span class="text">May 5, 2019</span>
+              <span class="text space">May 5, 2019</span>
               <i class="far fa-user"></i>
               <span class="text">Amanda Doe</span>
             </div>
             <h5 class="title bold">Next Investment</h5>
             <p class="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              tenetur maxime minima veritatis saepe repudiandae nam animi nihil
-              ipsa.
+              tenetur...
             </p>
             <div class="read-more">read more</div>
           </div>
@@ -235,26 +239,49 @@ main {
       font-size: 3rem;
     }
     .card {
+      width: 30%;
       margin: 5rem 3rem;
       line-height: 2rem;
-      img {
-        width: 50%;
-        margin-bottom: 1rem;
+      text-align: left;
+      &__top {
+        position: relative;
+        img {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+        .tag {
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+          background-color: $bg-color-08;
+          width: 45%;
+          color: $txt-color-01;
+          text-align: center;
+          padding: 0.4rem;
+          i {
+            color: $txt-color-01;
+          }
+        }
       }
       .title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       .text {
-        font-size: 1rem;
+        font-size: 0.9rem;
+      }
+      .space {
+        margin-right: 1.2rem;
       }
       i {
         color: $txt-color-08;
-        margin: 0 0.2rem 0 0.6rem;
+        margin-right: 0.6rem;
+        font-size: 0.9rem;
       }
       p {
         &.text {
           font-size: 1.2rem;
           line-height: 2rem;
+          padding: 0.5rem 0 1rem;
         }
       }
     }
