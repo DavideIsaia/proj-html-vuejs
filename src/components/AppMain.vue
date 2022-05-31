@@ -49,13 +49,11 @@
           <div class="read-more">read more</div>
         </div>
         <div class="col-right">
-          <div class="bar-container clearfix">
-            <h5 class="title bold left">Mentorship</h5>
-            <h5 class="title bold right">78%</h5>
-            <div class="progress-bar">
-              <div class="filled"></div>
-            </div>
-          </div>
+          <ProgressCard
+            v-for="(element, index) in bars"
+            :key="index"
+            :element="element"
+          />
         </div>
       </div>
     </section>
@@ -66,12 +64,14 @@
 import SpecCard from "./SpecCard.vue";
 import CitCard from "./CitCard.vue";
 import CalendarCard from "./CalendarCard.vue";
+import ProgressCard from "./ProgressCard.vue";
 export default {
   name: "AppMain",
   components: {
     SpecCard,
     CitCard,
     CalendarCard,
+    ProgressCard,
   },
   data() {
     return {
@@ -123,19 +123,19 @@ export default {
       bars: [
         {
           title: "Mentorship",
-          percentage: 78,
+          percentage: "78%",
         },
         {
           title: "Education",
-          percentage: 95,
+          percentage: "95%",
         },
         {
           title: "Learning",
-          percentage: 65,
+          percentage: "65%",
         },
         {
           title: "Motivation",
-          percentage: 83,
+          percentage: "83%",
         },
       ],
     };
@@ -196,33 +196,6 @@ main {
     .col-right {
       float: right;
       width: 45%;
-      .bar-container {
-        h5 {
-          font-size: 1.5rem;
-        }
-        .left {
-          float: left;
-        }
-        .right {
-          float: right;
-        }
-        .progress-bar {
-          position: relative;
-          top: 1rem;
-          float: left;
-          height: 2px;
-          width: 100%;
-          background-color: $bg-color-07;
-        }
-        .filled {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 78%;
-          height: 3px;
-          background-color: $bg-color-08;
-        }
-      }
     }
   }
 }
