@@ -58,6 +58,8 @@
     </section>
     <!-- section latest news -->
     <NewsCard />
+    <!-- section testimonials -->
+    <TestimonialsCard />
   </main>
 </template>
 
@@ -67,6 +69,7 @@ import CitCard from "./CitCard.vue";
 import CalendarCard from "./CalendarCard.vue";
 import ProgressCard from "./ProgressCard.vue";
 import NewsCard from "./NewsCard.vue";
+import TestimonialsCard from "./TestimonialsCard.vue";
 export default {
   name: "AppMain",
   components: {
@@ -75,6 +78,7 @@ export default {
     CalendarCard,
     ProgressCard,
     NewsCard,
+    TestimonialsCard,
   },
   data() {
     return {
