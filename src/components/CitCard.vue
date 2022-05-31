@@ -65,6 +65,10 @@ export default {
     .social i {
       background-color: $bg-color-08;
       color: $txt-color-01;
+      &:hover {
+        color: $txt-color-01;
+        background-color: $bg-color-12;
+      }
     }
   }
 }

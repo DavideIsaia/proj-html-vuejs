@@ -19,6 +19,8 @@
     </section>
     <!-- section founder's citation -->
     <CitCard />
+    <!-- section upcoming events -->
+    <section class="events"></section>
   </main>
 </template>
 
@@ -79,6 +81,13 @@ main {
     .title {
       font-size: 3rem;
     }
+  }
+  .events {
+    background-image: url("../assets/img/h1-img-09.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 5rem;
+    padding: 2rem 0;
   }
 }
 </style>
