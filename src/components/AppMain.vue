@@ -43,8 +43,7 @@
             minima illo veritatis ea, odio eius. Fugiat inventore placeat amet
             assumenda autem fuga est modi, voluptatum dolorem exercitationem,
             quam sit voluptatem? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Illo laborum, recusandae nisi provident fugiat
-            numquam culpa dolor minima velit nesciunt doloremque ullam
+            adipisicing.
           </p>
           <div class="read-more">read more</div>
         </div>
@@ -54,6 +53,34 @@
             :key="index"
             :element="element"
           />
+        </div>
+      </div>
+    </section>
+    <!-- section latest news -->
+    <section class="news">
+      <div class="container">
+        <h3 class="title bold">Latest News<span>.</span></h3>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit
+        </p>
+        <div class="line"></div>
+        <div class="flex">
+          <div class="card">
+            <img src="" alt="" />
+            <div>
+              <i class="far fa-clock"></i>
+              <span class="text">May 5, 2019</span>
+              <i class="far fa-user"></i>
+              <span class="text">Amanda Doe</span>
+            </div>
+            <h5 class="title bold">Next Investment</h5>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              tenetur maxime minima veritatis saepe repudiandae nam animi nihil
+              ipsa.
+            </p>
+            <div class="read-more">read more</div>
+          </div>
         </div>
       </div>
     </section>
@@ -156,8 +183,7 @@ main {
     text-align: center;
     padding-top: 6rem;
     .line {
-      margin-left: auto;
-      margin-right: auto;
+      margin: 2rem auto 0;
     }
     .title {
       font-size: 3rem;
@@ -180,7 +206,7 @@ main {
     }
   }
   .creative {
-    padding: 5rem 0;
+    padding: 6rem 0;
     background-color: $bg-color-01;
     .col-left {
       float: left;
@@ -196,6 +222,41 @@ main {
     .col-right {
       float: right;
       width: 45%;
+    }
+  }
+  .news {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 6rem;
+    .line {
+      margin: 2rem auto 0;
+    }
+    .title {
+      font-size: 3rem;
+    }
+    .card {
+      margin: 5rem 3rem;
+      line-height: 2rem;
+      img {
+        width: 50%;
+        margin-bottom: 1rem;
+      }
+      .title {
+        font-size: 1.5rem;
+      }
+      .text {
+        font-size: 1rem;
+      }
+      i {
+        color: $txt-color-08;
+        margin: 0 0.2rem 0 0.6rem;
+      }
+      p {
+        &.text {
+          font-size: 1.2rem;
+          line-height: 2rem;
+        }
+      }
     }
   }
 }
