@@ -38,43 +38,14 @@
         <button class="orange">Send</button>
       </div>
       <div class="sponsor flex">
-        <div class="wrapper">
-          <img src="../assets/img/h4-clients-img-03.png" alt="" />
+        <div v-for="item in logos" :key="item" class="wrapper">
           <img
-            class="hide"
-            src="../assets/img/h4-clients-img-04-1.png"
+            :src="require(`../assets/img/h4-clients-img-${item.img}.png`)"
             alt=""
           />
-        </div>
-        <div class="wrapper">
-          <img src="../assets/img/h4-clients-img-03.png" alt="" />
           <img
             class="hide"
-            src="../assets/img/h4-clients-img-04-1.png"
-            alt=""
-          />
-        </div>
-        <div class="wrapper">
-          <img src="../assets/img/h4-clients-img-03.png" alt="" />
-          <img
-            class="hide"
-            src="../assets/img/h4-clients-img-04-1.png"
-            alt=""
-          />
-        </div>
-        <div class="wrapper">
-          <img src="../assets/img/h4-clients-img-03.png" alt="" />
-          <img
-            class="hide"
-            src="../assets/img/h4-clients-img-04-1.png"
-            alt=""
-          />
-        </div>
-        <div class="wrapper">
-          <img src="../assets/img/h4-clients-img-03.png" alt="" />
-          <img
-            class="hide"
-            src="../assets/img/h4-clients-img-04-1.png"
+            :src="require(`../assets/img/h4-clients-img-${item.hide}.png`)"
             alt=""
           />
         </div>
@@ -86,6 +57,32 @@
 <script>
 export default {
   name: "ContactCard",
+  data() {
+    return {
+      logos: [
+        {
+          img: "03",
+          hide: "04-1",
+        },
+        {
+          img: "05",
+          hide: "06-1",
+        },
+        {
+          img: "07",
+          hide: "08-1",
+        },
+        {
+          img: "09",
+          hide: "10-1",
+        },
+        {
+          img: "01",
+          hide: "02",
+        },
+      ],
+    };
+  },
 };
 </script>
 
