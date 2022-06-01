@@ -125,10 +125,6 @@ export default {
         padding: 0.5rem 0 1rem;
       }
     }
-    &:hover {
-      background-color: $bg-color-07;
-      cursor: pointer;
-    }
   }
 }
 </style>

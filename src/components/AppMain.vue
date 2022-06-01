@@ -35,7 +35,7 @@
     <!-- section creative leader -->
     <section class="creative">
       <div class="container clearfix">
-        <div class="col-left">
+        <div class="left">
           <h4 class="title bold">Creative Leader<span>.</span></h4>
           <div class="line"></div>
           <p class="text">
@@ -47,7 +47,7 @@
           </p>
           <div class="read-more">read more</div>
         </div>
-        <div class="col-right">
+        <div class="right">
           <ProgressCard
             v-for="(element, index) in bars"
             :key="index"
@@ -64,6 +64,47 @@
     <section class="player">
       <img src="../assets/img/h1-img-04.jpg" alt="" />
       <i class="fas fa-play"></i>
+    </section>
+    <!-- section contact -->
+    <section class="contact">
+      <div class="container clearfix">
+        <div class="left">
+          <div class="dots">
+            <img src="../assets/img/h1-contact-rev-02.png" alt="" />
+            <img src="../assets/img/h1-contact-rev-02.png" alt="" />
+            <img src="../assets/img/h1-contact-rev-02.png" alt="" />
+          </div>
+          <div class="label">
+            <img src="../assets/img/h1-contact-rev-03.png" alt="" />
+            <span class="title bold">New York Coaching</span>
+            <span class="read-more">read more</span>
+          </div>
+        </div>
+        <div class="right">
+          <h3 class="title bold">Contact us<span>.</span></h3>
+          <div class="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit
+          </div>
+          <div class="line"></div>
+          <input
+            type="text"
+            class="control text"
+            id="name"
+            placeholder="Your Name"
+          />
+          <input
+            type="email"
+            class="control text"
+            id="email"
+            placeholder="Your Email"
+          />
+          <textarea
+            class="control text"
+            placeholder="Write a message..."
+          ></textarea>
+        </div>
+        <div class="sponsor right"></div>
+      </div>
     </section>
   </main>
 </template>
@@ -193,8 +234,7 @@ main {
   .creative {
     padding: 6rem 0;
     background-color: $bg-color-01;
-    .col-left {
-      float: left;
+    .left {
       width: 45%;
       .title {
         font-size: 3rem;
@@ -204,8 +244,7 @@ main {
         padding-bottom: 2rem;
       }
     }
-    .col-right {
-      float: right;
+    .right {
       width: 45%;
     }
   }
@@ -223,6 +262,81 @@ main {
       &:hover {
         cursor: pointer;
         color: $txt-color-08;
+      }
+    }
+  }
+  .contact {
+    margin-top: 8rem;
+    .left {
+      width: 45%;
+      background-image: url("../assets/img/h1-contact-rev-01.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 400px;
+      .dots {
+        position: relative;
+        cursor: pointer;
+        img {
+          position: absolute;
+          width: 5%;
+        }
+        :first-child {
+          top: 130px;
+          left: 160px;
+        }
+        :nth-child(2) {
+          top: 100px;
+          left: 300px;
+        }
+        :last-child {
+          top: 250px;
+          right: 90px;
+        }
+      }
+      .label {
+        position: relative;
+        img {
+          width: 40%;
+          position: absolute;
+          top: 170px;
+          left: 160px;
+        }
+        :nth-child(2) {
+          position: absolute;
+          top: 190px;
+          left: 190px;
+          font-size: 1.1rem;
+        }
+        :last-child {
+          position: absolute;
+          top: 230px;
+          left: 190px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .right {
+      width: 45%;
+      h3 {
+        font-size: 3rem;
+      }
+      .control {
+        border: 0;
+        border-bottom: 2px solid $bdr-color-04;
+        background-color: $bg-color-04;
+        font-size: 0.9rem;
+        padding: 1rem;
+      }
+      #name {
+        margin-right: 3.3rem;
+      }
+      input {
+        min-width: 45%;
+      }
+      textarea {
+        display: block;
+        min-height: 100px;
+        min-width: 100%;
       }
     }
   }
