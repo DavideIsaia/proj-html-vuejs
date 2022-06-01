@@ -35,7 +35,20 @@
           class="control text"
           placeholder="Write a message..."
         ></textarea>
-        <button class="orange">Send</button>
+        <button class="orange">
+          <span>Send</span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="32"
+            style="height: 22px"
+            fill="white"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
+        </button>
       </div>
       <div class="sponsor flex">
         <div v-for="item in logos" :key="item" class="wrapper">
@@ -166,6 +179,19 @@ export default {
       background-color: $bg-color-08;
       color: $txt-color-01;
       margin: 2rem 0;
+      padding: 0.8rem 1.5rem;
+      span {
+        padding: 0.8rem;
+        border-right: 2px solid white;
+      }
+      svg {
+        padding: 0 1rem;
+      }
+      &:hover {
+        span {
+          border-right: 2px solid transparent;
+        }
+      }
     }
   }
   .sponsor {

@@ -40,8 +40,34 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad excepturi
           soluta nesciunt vitae nobis, inventore beatae laboriosam deserunt.
         </p>
-        <button class="white">Read More</button>
-        <button class="orange">Purchase</button>
+        <button class="white">
+          <span>Read More</span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="32"
+            style="height: 22px"
+            fill="black"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
+        </button>
+        <button class="orange">
+          <span>Purchase</span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="32"
+            style="height: 22px"
+            fill="white"
+          >
+            <path
+              d="M4 15a1 1 0 001 1h19.586l-4.292 4.292a1 1 0 001.414 1.414l6-6a.99.99 0 00.292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 00-.216-.324l-6-6a1 1 0 00-1.414 1.414L24.586 14H5a1 1 0 00-1 1z"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   </header>
@@ -108,10 +134,34 @@ nav {
   }
   .white {
     background-color: $bg-color-01;
+    span {
+      padding: 0.8rem;
+      border-right: 2px solid black;
+    }
+    svg {
+      padding: 0 1rem;
+    }
+    &:hover {
+      span {
+        border-right: 2px solid transparent;
+      }
+    }
   }
   .orange {
     background-color: $bg-color-08;
     color: $txt-color-01;
+    span {
+      padding: 0.8rem;
+      border-right: 2px solid white;
+    }
+    svg {
+      padding: 0 1rem;
+    }
+    &:hover {
+      span {
+        border-right: 2px solid transparent;
+      }
+    }
   }
 }
 </style>
