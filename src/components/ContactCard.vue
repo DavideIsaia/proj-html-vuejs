@@ -50,6 +50,7 @@
           </svg>
         </button>
       </div>
+      <!-- icone degli sponsor aggiunte dinamicamente -->
       <div class="sponsor flex">
         <div v-for="item in logos" :key="item" class="wrapper">
           <img

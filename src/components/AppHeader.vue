@@ -1,9 +1,17 @@
 <template>
   <header>
+    <!-- navbar -->
     <nav class="flex">
       <div class="logo">
         <img src="../assets/img/logo-img-01.png" alt="Everlead logo" />
+        <!-- hover logo -->
+        <img
+          class="hide"
+          src="../assets/img/logo-img-02.png"
+          alt="Everlead logo bloack"
+        />
       </div>
+      <!-- links dinamici menu -->
       <ul>
         <li
           class="text"
@@ -12,6 +20,7 @@
           :key="index"
           :class="{ active: element.active }"
         >
+          <!-- svg freccia classe active menu -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -25,6 +34,7 @@
           </svg>
           <a class="bold" href="">{{ element.text }}</a>
         </li>
+        <!-- icone menu -->
         <li>
           <a href=""><i class="fas fa-search"></i></a>
         </li>
@@ -33,6 +43,7 @@
         </li>
       </ul>
     </nav>
+    <!-- call to action -->
     <div class="cta flex">
       <div class="container">
         <h2 class="title bold">Our Team<span>.</span></h2>
@@ -85,6 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables.scss";
+// navbar
 nav {
   position: absolute;
   top: 0;
@@ -93,10 +105,28 @@ nav {
   width: 90%;
   height: 120px;
   margin: 0 auto;
-  img {
-    width: 60%;
-    padding: 2rem;
+  .logo {
+    position: relative;
+    width: 200px;
+    &:hover {
+      .hide {
+        display: block;
+        cursor: pointer;
+        background-color: $bg-color-12;
+      }
+    }
   }
+  img {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+  .hide {
+    display: none;
+  }
+  // links menu
   li {
     display: inline-block;
     margin: 0 1.5rem;
@@ -105,7 +135,6 @@ nav {
     cursor: pointer;
     color: $txt-color-14;
     font-size: 0.9rem;
-
     &.active,
     &:hover {
       a {
@@ -119,7 +148,7 @@ nav {
     }
   }
 }
-
+// call to action
 .cta {
   background-image: url("../assets/img/rev-slider-main-home-img-03.jpg");
   background-size: cover;
@@ -132,6 +161,7 @@ nav {
   .text {
     width: 45%;
   }
+  // buttons
   .white {
     background-color: $bg-color-01;
     span {

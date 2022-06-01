@@ -1,8 +1,12 @@
 <template>
   <div id="app">
+    <!-- header -->
     <AppHeader @isActive="isActive" :headerLinks="headerLinks" />
+    <!-- main -->
     <AppMain />
+    <!-- footer -->
     <AppFooter />
+    <!-- bottoni fixed laterali -->
     <a href="#" class="return-to-top">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -117,8 +121,19 @@ export default {
   color: $txt-color-09;
   line-height: 2rem;
 }
-.return-to-top {
+.return-to-top,
+.spin,
+.buy {
   position: fixed;
+  text-align: center;
+}
+.spin,
+.buy {
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.return-to-top {
   top: 50vh;
   right: 10px;
   width: 3rem;
@@ -126,27 +141,16 @@ export default {
   background-color: white;
   padding: 0.5rem;
   border-radius: 50%;
-  text-align: center;
   box-shadow: 1px 1px 8px 0px $bg-color-11;
 }
 .spin {
-  position: fixed;
   top: 35vh;
-  right: 0;
-  width: 2.5rem;
-  height: 2.5rem;
   background-color: $bg-color-10;
   padding: 0.4rem;
-  text-align: center;
 }
 .buy {
-  position: fixed;
   top: 40vh;
-  right: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: white;
+  background-color: $bg-color-01;
   padding: 0.7rem;
-  text-align: center;
 }
 </style>

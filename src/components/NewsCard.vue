@@ -8,6 +8,7 @@
       <img class="svg" src="../assets/svg/svg-4.svg" alt="" />
       <div class="line"></div>
       <div class="flex">
+        <!-- card latest news dinamiche -->
         <div v-for="item in newsArray" :key="item" class="card">
           <div class="card__top">
             <img

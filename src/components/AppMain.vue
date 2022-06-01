@@ -163,6 +163,7 @@ export default {
 @import "../style/variables.scss";
 main {
   background-color: $bg-color-04;
+  // section specialties
   .spec {
     width: 90%;
     background-color: $bg-color-01;
@@ -178,6 +179,7 @@ main {
       font-size: 3rem;
     }
   }
+  // section events
   .events {
     background-image: url("../assets/img/h1-img-09.jpg");
     background-size: cover;
@@ -194,6 +196,7 @@ main {
       }
     }
   }
+  // section creative
   .creative {
     padding: 6rem 0;
     background-color: $bg-color-01;
@@ -211,6 +214,7 @@ main {
       width: 45%;
     }
   }
+  // section player
   .player {
     position: relative;
     margin-top: 22.2rem;

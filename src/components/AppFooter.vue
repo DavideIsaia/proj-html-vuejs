@@ -1,6 +1,7 @@
 <template>
   <footer>
     <div class="container clearfix">
+      <!-- colonna abiut -->
       <div class="left">
         <h4 class="title">About</h4>
         <div class="line"></div>
@@ -14,6 +15,7 @@
           <i class="fab fa-twitter"></i>
         </div>
       </div>
+      <!-- colonna twitter -->
       <div class="left">
         <h4 class="title">Twitter</h4>
         <div class="line"></div>
@@ -35,15 +37,18 @@
           </p>
         </div>
       </div>
+      <!-- colonna links -->
       <div class="left">
         <h4 class="title">Important links</h4>
         <div class="line"></div>
+        <!-- link footer dinamici -->
         <ul>
           <li v-for="item in links" :key="item" class="links">
             <a href="" class="text">{{ item }}</a>
           </li>
         </ul>
       </div>
+      <!-- colonna contact -->
       <div class="right">
         <h4 class="title">Contact me</h4>
         <div class="line"></div>
@@ -59,6 +64,7 @@
           <i class="fas fa-envelope"></i>
           <p class="text">everlead@mikado.com</p>
         </div>
+        <!-- subscribe form -->
         <input type="text" class="text" id="name" placeholder="Your Name" />
         <button class="sub">Subscribe</button>
       </div>
@@ -175,9 +181,11 @@ footer {
 }
 .copyright {
   background-color: $bg-color-08;
-  color: $txt-color-01;
   padding: 0.4rem;
   text-align: center;
   font-size: 0.9rem;
+  &.text {
+    color: $txt-color-01;
+  }
 }
 </style>

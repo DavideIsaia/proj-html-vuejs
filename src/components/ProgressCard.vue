@@ -3,6 +3,7 @@
     <h5 class="title bold left">{{ element.title }}</h5>
     <h5 class="title bold right">{{ element.percentage }}</h5>
     <div class="progress-bar">
+      <!-- stile inline in modo da poter cambiare dinamicamente la barra di progressione tramite i valori dei props -->
       <div class="filled" :style="{ width: element.percentage }"></div>
     </div>
   </div>
