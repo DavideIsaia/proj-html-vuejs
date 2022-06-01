@@ -38,11 +38,11 @@
       <div class="left">
         <h4 class="title">Important links</h4>
         <div class="line"></div>
-        <div class="links"><a href="" class="text"> About me</a></div>
-        <div class="links"><a href="" class="text">About us</a></div>
-        <div class="links"><a href="" class="text">Language packs</a></div>
-        <div class="links"><a href="" class="text">Become a coach</a></div>
-        <div class="links"><a href="" class="text">Language packs</a></div>
+        <ul>
+          <li v-for="item in links" :key="item" class="links">
+            <a href="" class="text">{{ item }}</a>
+          </li>
+        </ul>
       </div>
       <div class="right">
         <h4 class="title">Contact me</h4>
@@ -70,6 +70,17 @@
 <script>
 export default {
   name: "AppFooter",
+  data() {
+    return {
+      links: [
+        "About me",
+        "About us",
+        "Language packs",
+        "Become a coach",
+        "Monthly Events",
+      ],
+    };
+  },
 };
 </script>
 
